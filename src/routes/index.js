@@ -5,7 +5,9 @@ import Route from './Route';
 import SignIn from '~/pages/SignIn';
 
 export default function Routes() {
-  <Switch>
-    <Route path="/" exact component={} />
-  </Switch>
+  return (
+    <Switch>
+      <Route path="/" exact component={SignIn} />
+    </Switch>
+  );
 }
