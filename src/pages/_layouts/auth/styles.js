@@ -40,7 +40,6 @@ export const Content = styled.div`
       margin-bottom: 20px;
       border-radius: 4px;
       border: 1px solid #dddddd;
-      color: #dddddd;
     }
 
     button {
