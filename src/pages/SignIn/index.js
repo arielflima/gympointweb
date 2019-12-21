@@ -1,10 +1,8 @@
 import React from 'react';
 
 import { Form, Input } from '@rocketseat/unform';
-import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
 
-import { Container, Content } from './styles';
 import logo from '~/assets/logo.svg';
 
 const schema = Yup.object().shape({
@@ -17,19 +15,15 @@ const schema = Yup.object().shape({
 export default function SignIn() {
   return (
     <>
-      <Container>
-        <Content>
-          <img src={logo} alt="GymPoint" />
-          <Form schema={schema}>
-            <strong>SEU E-MAIL</strong>
-            <Input name="email" type="email" placeholder="exemplo@email.com" />
-            <strong>SUA SENHA</strong>
-            <Input name="password" type="password" placeholder="***********" />
+      <img src={logo} alt="GymPoint" />
+      <Form schema={schema}>
+        <strong>SEU E-MAIL</strong>
+        <Input name="email" type="email" placeholder="exemplo@email.com" />
+        <strong>SUA SENHA</strong>
+        <Input name="password" type="password" placeholder="***********" />
 
-            <button type="submit">Entrar no sistema</button>
-          </Form>
-        </Content>
-      </Container>
+        <button type="submit">Entrar no sistema</button>
+      </Form>
     </>
   );
 }
