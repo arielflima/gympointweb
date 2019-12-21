@@ -19,9 +19,11 @@ export function* signIn({ payload }) {
     api.defaults.headers.Authorization = `Bearer ${token}`;
 
     yield put(signInSuccess(token, user));
+    console.tron('sucesso put signInsuccess');
 
     history.push('/students');
   } catch (err) {
+    console.tron('deu errado');
     toast.error('Usuário e/ou senha inválidos!');
     yield put(signFailure());
   }
