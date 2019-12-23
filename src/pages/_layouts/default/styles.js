@@ -5,8 +5,8 @@ export const Wrapper = styled.div`
   width: 100%;
   background: #ee4d64;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
   margin: 0;
   border: 0;
 `;

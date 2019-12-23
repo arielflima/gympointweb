@@ -6,7 +6,7 @@ import { Container, Content, Profile } from './styles';
 import logo from '~/assets/logo_header.svg';
 
 export default function Header() {
-  const user = useSelector(state => state.auth.user);
+  const name = useSelector(state => state.auth.name);
 
   return (
     <Container>
@@ -19,7 +19,7 @@ export default function Header() {
       <aside>
         <Profile>
           <div>
-            <strong>{user.name}</strong>
+            <strong>{name}</strong>
             <Link to="/">sair do sistema</Link>
           </div>
         </Profile>
