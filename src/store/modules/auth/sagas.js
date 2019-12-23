@@ -19,11 +19,9 @@ export function* signIn({ payload }) {
     api.defaults.headers.Authorization = `Bearer ${token}`;
 
     yield put(signInSuccess(token, user));
-    console.tron('sucesso put signInsuccess');
 
     history.push('/students');
   } catch (err) {
-    console.tron('deu errado');
     toast.error('Usuário e/ou senha inválidos!');
     yield put(signFailure());
   }
@@ -45,6 +43,6 @@ export function signOut() {
 
 export default all([
   takeLatest('persist/REHYDRATE', setToken),
-  takeLatest('persist/SIGN_IN_REQUEST', setToken),
-  takeLatest('persist/SIGN_OUT', setToken),
+  takeLatest('@auth/SIGN_IN_REQUEST', signIn),
+  takeLatest('@auth/SIGN_OUT', signOut),
 ]);
