@@ -10,20 +10,24 @@ export default function Header() {
 
   return (
     <Container>
-      <Content />
-      <nav>
+      <Content>
         <img src={logo} alt="GymPoint" />
-        <Link to="/students">Alunos</Link>
-      </nav>
+        <nav>
+          <Link to="/students">ALUNOS</Link>
+          <Link to="/students">PLANOS</Link>
+          <Link to="/students">MATRÍCULAS</Link>
+          <Link to="/students">PEDIDOS DE AUXÍLIO</Link>
+        </nav>
 
-      <aside>
-        <Profile>
-          <div>
-            <strong>{name}</strong>
-            <Link to="/">sair do sistema</Link>
-          </div>
-        </Profile>
-      </aside>
+        <aside>
+          <Profile>
+            <div>
+              <strong>{name}</strong>
+              <Link to="/">sair do sistema</Link>
+            </div>
+          </Profile>
+        </aside>
+      </Content>
     </Container>
   );
 }
